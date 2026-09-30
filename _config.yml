@@ -20,6 +20,7 @@ permalink: /posts/:title/
 markdown: kramdown
 exclude:
   - README.md
+  - COPY.md
 
 defaults:
   - scope: { type: posts }
