@@ -105,6 +105,7 @@ section + section { margin-top: 2.5rem; }
   border-bottom: 3px solid var(--text);
   align-self: end;
 }
+.intro-col .name { color: #f2a900; }
 .intro-col p {
   font-family: "Merriweather", Georgia, serif;
   font-weight: 300;
