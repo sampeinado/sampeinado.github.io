@@ -8,21 +8,21 @@
 }
 @media (prefers-color-scheme: light) {
   :root[data-theme="system"] {
-    --bg: #e4c7b8;
+    --bg: #f5d5a1;
     --text: #1f1b16;
-    --muted: #6e5549;
-    --border: #d2b3a2;
-    --surface: #dbbcab;
-    --surface-active: #cfae9c;
+    --muted: #6e5a3a;
+    --border: #e0bf8a;
+    --surface: #ecc990;
+    --surface-active: #e0bb80;
   }
 }
 :root[data-theme="light"] {
-  --bg: #e4c7b8;
+  --bg: #f5d5a1;
   --text: #1f1b16;
-  --muted: #6e5549;
-  --border: #d2b3a2;
-  --surface: #dbbcab;
-  --surface-active: #cfae9c;
+  --muted: #6e5a3a;
+  --border: #e0bf8a;
+  --surface: #ecc990;
+  --surface-active: #e0bb80;
 }
 
 * { box-sizing: border-box; }
