@@ -31,12 +31,14 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-family: "Merriweather", Georgia, serif;
+  font-weight: 300;
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 a { color: inherit; text-decoration: none; }
+button { font: inherit; }
 .container { max-width: 600px; margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
 
 .prose a { text-decoration: underline; text-decoration-color: var(--muted); text-underline-offset: 3px; }
@@ -44,8 +46,10 @@ a { color: inherit; text-decoration: none; }
 .intro { margin: 0 0 2rem; }
 
 /* Headings & lists */
-.page-title { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 0.75rem; }
-.section-title { font-size: 1.25rem; font-weight: 500; color: var(--muted); margin: 0 0 0.75rem; }
+/* Headings use Montserrat; everything else uses Merriweather */
+.page-title, .section-title, .prose h2 { font-family: "Montserrat", sans-serif; }
+.page-title { font-size: 1.75rem; font-weight: 900; text-transform: uppercase; letter-spacing: -0.01em; margin: 0 0 0.75rem; }
+.section-title { font-size: 1.25rem; font-weight: 700; color: var(--muted); margin: 0 0 0.75rem; }
 .section-title a:hover { color: var(--text); }
 section + section { margin-top: 2.5rem; }
 .list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--border); }
@@ -94,7 +98,7 @@ section + section { margin-top: 2.5rem; }
 /* Subgrid keeps every heading rule on the same line, even when headings wrap differently */
 .intro-col { display: grid; grid-row: span 2; grid-template-rows: subgrid; row-gap: 0; }
 .intro-col h2 {
-  font-family: "Montserrat", "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
   font-size: clamp(1.6rem, 2.3vw, 2rem);
@@ -111,8 +115,6 @@ section + section { margin-top: 2.5rem; }
 .intro-col h2.red { color: #c94f3d; }
 .intro-col h2.green { color: #3a8a4a; }
 .intro-col p {
-  font-family: "Merriweather", Georgia, serif;
-  font-weight: 300;
   font-size: 1.1rem;
   line-height: 1.75;
   margin: 1.25rem 0 0;
