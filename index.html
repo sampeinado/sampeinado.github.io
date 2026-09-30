@@ -1,0 +1,24 @@
+---
+layout: base
+---
+<header class="hero">
+  <h1>{{ site.title }}</h1>
+  <p class="tagline">{{ site.tagline }}</p>
+  <div class="pills">{% include social.html class="pill" arrow="<span class='arrow'>→</span>" %}</div>
+</header>
+
+<section class="bio">
+  <p>I like building products people love and exploring what AI makes possible. Right now I'm focused on <em>[what you're working on]</em>. Lately I've been exploring <em>[current interests]</em>.</p>
+  <p>I save a lot of stuff across the web — check out <a href="{{ '/favorites/' | relative_url }}">my favorites</a>!</p>
+</section>
+
+<section>
+  <h2 class="section-title"><a href="{{ '/posts/' | relative_url }}">Posts</a></h2>
+  {% include list.html items=site.posts %}
+</section>
+
+<section>
+  <h2 class="section-title"><a href="{{ '/projects/' | relative_url }}">Projects</a></h2>
+  {% assign projects = site.projects | sort: "date" | reverse %}
+  {% include list.html items=projects %}
+</section>

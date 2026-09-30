@@ -1,0 +1,6 @@
+{% comment %} Renders a dated list. Pass items=... {% endcomment %}
+<ul class="list">
+  {% for item in include.items %}
+  <li><a href="{{ item.url | relative_url }}"><span>{{ item.title }}</span><time>{{ item.date | date: "%b %-d, %Y" }}</time></a></li>
+  {% endfor %}
+</ul>

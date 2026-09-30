@@ -1,0 +1,30 @@
+# Site settings — edit these
+title: Sam Peinado
+tagline: Building products & AI
+description: Sam Peinado's personal website.
+url: https://sampeinado.github.io
+
+# Social links (leave a value blank to hide it)
+email: speinado@stanford.edu
+x: ""            # e.g. sampeinado
+github: sampeinado
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+permalink: /posts/:title/
+markdown: kramdown
+exclude:
+  - README.md
+
+defaults:
+  - scope: { type: posts }
+    values:
+      layout: post
+      parent: { title: Posts, url: /posts/ }
+  - scope: { type: projects }
+    values:
+      layout: post
+      parent: { title: Projects, url: /projects/ }

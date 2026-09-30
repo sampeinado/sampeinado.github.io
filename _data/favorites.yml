@@ -1,0 +1,15 @@
+# Add categories and items here. Each item needs a name, url, and short note.
+- category: Tools
+  items:
+    - name: Claude Code
+      url: https://claude.com/claude-code
+      note: My day-to-day coding agent.
+    - name: Obsidian
+      url: https://obsidian.md
+      note: Where my notes live.
+
+- category: Reading
+  items:
+    - name: Paul Graham's Essays
+      url: https://paulgraham.com/articles.html
+      note: The essays I keep coming back to.

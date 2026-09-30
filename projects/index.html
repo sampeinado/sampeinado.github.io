@@ -1,0 +1,8 @@
+---
+layout: page
+title: Projects
+---
+<p class="intro">A short index of the things I have built.</p>
+<h1 class="page-title">Projects</h1>
+{% assign projects = site.projects | sort: "date" | reverse %}
+{% include list.html items=projects %}
