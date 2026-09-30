@@ -109,6 +109,7 @@ section + section { margin-top: 2.5rem; }
 .intro-col h2.yellow { color: #f2a900; }
 .intro-col h2.cobalt { color: #3b6fe0; }
 .intro-col h2.red { color: #c94f3d; }
+.intro-col h2.green { color: #3a8a4a; }
 .intro-col p {
   font-family: "Merriweather", Georgia, serif;
   font-weight: 300;
