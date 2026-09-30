@@ -1,17 +1,4 @@
 ---
 layout: base
 ---
-<header class="site-header">
-  <a href="{{ '/' | relative_url }}" class="site-name">{{ site.title }}</a>
-  <nav>
-    <a href="{{ '/posts/' | relative_url }}">Posts</a>
-    <a href="{{ '/projects/' | relative_url }}">Projects</a>
-    <a href="{{ '/favorites/' | relative_url }}">Favorites</a>
-  </nav>
-</header>
-<nav class="breadcrumb">
-  <a href="{{ '/' | relative_url }}">Home</a>
-  {% if page.parent %}<span class="sep">›</span><a href="{{ page.parent.url | relative_url }}">{{ page.parent.title }}</a>{% endif %}
-  <span class="sep">›</span><span>{{ page.crumb | default: page.title }}</span>
-</nav>
 {{ content }}
