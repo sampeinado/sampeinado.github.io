@@ -102,10 +102,13 @@ section + section { margin-top: 2.5rem; }
   letter-spacing: -0.01em;
   margin: 0;
   padding-bottom: 1.25rem;
-  border-bottom: 3px solid var(--text);
+  border-bottom: 3px solid currentColor;
   align-self: end;
 }
-.intro-col .name { color: #f2a900; }
+/* Heading colors (the rule underneath matches) */
+.intro-col h2.yellow { color: #f2a900; }
+.intro-col h2.cobalt { color: #3b6fe0; }
+.intro-col h2.red { color: #c94f3d; }
 .intro-col p {
   font-family: "Merriweather", Georgia, serif;
   font-weight: 300;
