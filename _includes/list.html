@@ -1,6 +1,6 @@
-{% comment %} Renders a dated list. Pass items=... {% endcomment %}
+{% comment %} Renders a dated list. Pass items=... Items with external_url link out. {% endcomment %}
 <ul class="list">
   {% for item in include.items %}
-  <li><a href="{{ item.url | relative_url }}"><span>{{ item.title }}</span><time>{{ item.date | date: "%b %-d, %Y" }}</time></a></li>
+  <li>{% if item.external_url %}<a href="{{ item.external_url }}" target="_blank" rel="noopener"><span>{{ item.title }} <small class="source">{{ item.source }} ↗</small></span>{% else %}<a href="{{ item.url | relative_url }}"><span>{{ item.title }}</span>{% endif %}<time>{{ item.date | date: "%b %-d, %Y" }}</time></a></li>
   {% endfor %}
 </ul>

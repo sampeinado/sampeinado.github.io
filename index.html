@@ -1,24 +1,37 @@
 ---
 layout: base
+wide: true
 ---
-<header class="hero">
-  <h1>{{ site.title }}</h1>
-  <p class="tagline">{{ site.tagline }}</p>
-  <div class="pills">{% include social.html class="pill" arrow="<span class='arrow'>→</span>" %}</div>
-</header>
+<div class="intro-grid">
+  <section class="intro-col">
+    <h2>My name is {{ site.title }}</h2>
+    <p>and I'm interested in energy, technology, and how they shape each other. I write about it on <a href="{{ site.substack }}">Substack</a> and occasionally <a href="https://www.rtoinsider.com/143538-the-software-fix-that-could-save-pjm-customers-billions/">elsewhere</a>. I also save a lot of stuff across the web &mdash; here are <a href="{{ '/favorites/' | relative_url }}">my favorites</a>.</p>
+  </section>
 
-<section class="bio">
-  <p>I like building products people love and exploring what AI makes possible. Right now I'm focused on <em>[what you're working on]</em>. Lately I've been exploring <em>[current interests]</em>.</p>
-  <p>I save a lot of stuff across the web — check out <a href="{{ '/favorites/' | relative_url }}">my favorites</a>!</p>
-</section>
+  <section class="intro-col">
+    <h2>I build products &amp; AI</h2>
+    <p>because I like making things people love. Right now I'm focused on <em>[what you're working on]</em>. You can see what I've built in <a href="{{ '/projects/' | relative_url }}">projects</a>.</p>
+  </section>
 
-<section>
-  <h2 class="section-title"><a href="{{ '/posts/' | relative_url }}">Posts</a></h2>
-  {% include list.html items=site.posts %}
-</section>
+  <section class="intro-col">
+    <h2>I write about power</h2>
+    <p>in <a href="{{ site.substack }}">Lust for Power</a>, which explores the contradictions and bottlenecks to clean energy growth &mdash; and most recently in <a href="https://www.rtoinsider.com/143538-the-software-fix-that-could-save-pjm-customers-billions/">RTO Insider</a> on the software fix that could save PJM customers billions.</p>
+  </section>
 
-<section>
-  <h2 class="section-title"><a href="{{ '/projects/' | relative_url }}">Projects</a></h2>
-  {% assign projects = site.projects | sort: "date" | reverse %}
-  {% include list.html items=projects %}
-</section>
+  <section class="intro-col">
+    <h2>I'd love to hear from you!</h2>
+    <p><a href="mailto:{{ site.email }}">Email</a> is best, but you can also find me on <a href="https://www.linkedin.com/in/{{ site.linkedin }}/">LinkedIn</a>, <a href="https://github.com/{{ site.github }}">GitHub</a>, and <a href="{{ site.substack }}">Substack</a>.</p>
+  </section>
+</div>
+
+<div class="home-lists">
+  <section>
+    <h2 class="section-title"><a href="{{ '/posts/' | relative_url }}">Posts</a></h2>
+    {% include list.html items=site.posts %}
+  </section>
+  <section>
+    <h2 class="section-title"><a href="{{ '/projects/' | relative_url }}">Projects</a></h2>
+    {% assign projects = site.projects | sort: "date" | reverse %}
+    {% include list.html items=projects %}
+  </section>
+</div>
