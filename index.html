@@ -23,15 +23,3 @@ wide: true
     <p><a href="mailto:{{ site.email }}">Email</a> is best, but you can also find me on <a href="https://www.linkedin.com/in/{{ site.linkedin }}/">LinkedIn</a>, <a href="https://github.com/{{ site.github }}">GitHub</a>, and <a href="{{ site.substack }}">Substack</a>.</p>
   </section>
 </div>
-
-<div class="home-lists">
-  <section>
-    <h2 class="section-title"><a href="{{ '/posts/' | relative_url }}">Posts</a></h2>
-    {% include list.html items=site.posts %}
-  </section>
-  <section>
-    <h2 class="section-title"><a href="{{ '/projects/' | relative_url }}">Projects</a></h2>
-    {% assign projects = site.projects | sort: "date" | reverse %}
-    {% include list.html items=projects %}
-  </section>
-</div>

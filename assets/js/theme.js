@@ -2,8 +2,9 @@
   var root = document.documentElement;
   var buttons = document.querySelectorAll("[data-theme-value]");
 
+  // Dark is the default, so it's stored as "no preference"
   function apply(value) {
-    if (value === "system") {
+    if (value === "dark") {
       delete root.dataset.theme;
       localStorage.removeItem("theme");
     } else {
@@ -18,5 +19,5 @@
   buttons.forEach(function (b) {
     b.addEventListener("click", function () { apply(b.dataset.themeValue); });
   });
-  apply(localStorage.getItem("theme") || "system");
+  apply(localStorage.getItem("theme") || "dark");
 })();
