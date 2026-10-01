@@ -1,6 +1,5 @@
 # Site settings — edit these
 title: Sam Peinado
-tagline: Building products & AI
 description: Sam Peinado's personal website.
 url: https://sampeinado.github.io
 
@@ -12,22 +11,16 @@ linkedin: sampeinado
 substack: https://lustforpower.substack.com/
 
 collections:
-  projects:
+  work:
     output: true
-    permalink: /projects/:name/
+    permalink: /work/:name/
 
-permalink: /posts/:title/
 markdown: kramdown
 exclude:
   - README.md
   - COPY.md
 
 defaults:
-  - scope: { type: posts }
+  - scope: { type: work }
     values:
       layout: post
-      parent: { title: Posts, url: /posts/ }
-  - scope: { type: projects }
-    values:
-      layout: post
-      parent: { title: Projects, url: /projects/ }
