@@ -1,6 +1,6 @@
 # Work page content. Each section has a label, a mark (underline, burst, or circle),
 # a color (yellow, cobalt, red, green), and items.
-# Item fields: title, url (optional), details (list, joined with dots), from, to (optional), lines (optional list).
+# Item fields: title (may contain links), url (optional), details (may contain links) (list, joined with dots), from, to (optional), lines (optional list).
 intro: is a product leader building the next generation of the power grid, based in Stanford, California.
 
 sections:
@@ -8,8 +8,7 @@ sections:
     mark: underline
     color: cobalt
     items:
-      - title: Stanford GSB
-        url: https://www.gsb.stanford.edu
+      - title: <a href="https://www.gsb.stanford.edu">Stanford GSB</a> &amp; <a href="https://sustainability.stanford.edu">Doerr School of Sustainability</a>
         details: [MBA & MS Energy]
         from: 2025
         to: now
@@ -24,7 +23,7 @@ sections:
     items:
       - title: X, the Moonshot Factory
         url: https://x.company
-        details: ["Product Manager, Tapestry", Mountain View]
+        details: ['Product Manager, <a href="https://www.tapestryenergy.com">Tapestry</a>', Mountain View]
         from: 2026
       - title: Voltus
         url: https://www.voltus.co
