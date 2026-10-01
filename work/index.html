@@ -31,7 +31,7 @@ wide: true
       {% else %}
       <p class="resume-meta">
         {% for d in item.details %}<span>{{ d }}</span>{% include marks/dot.svg %}{% endfor %}
-        <span>{{ item.from }}</span>{% if item.to %}{% include marks/dash.svg %}<span>{{ item.to }}</span>{% endif %}
+        <span class="resume-dates"><span>{{ item.from }}</span>{% if item.to %}{% include marks/dash.svg %}<span>{{ item.to }}</span>{% endif %}</span>
       </p>
       {% endif %}
     </div>
