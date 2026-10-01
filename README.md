@@ -4,7 +4,8 @@ Personal website, built with Jekyll and hosted on GitHub Pages at https://sampei
 
 ## Editing
 
-- **Name, social links:** `_config.yml`
+- **Name, email, LinkedIn, Substack:** `_config.yml`
+- **Footer links:** `_includes/footer.html`
 - **Homepage copy:** `index.html`
 - **About page:** `about/index.html`
 - **Work page (résumé):** `_data/work.yml`

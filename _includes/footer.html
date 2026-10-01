@@ -1,6 +1,11 @@
 <footer class="footer">
   <div class="footer-row">
-    <nav class="footer-links">{% if page.url != "/" %}<a href="{{ '/' | relative_url }}">Home</a>{% endif %}{% include social.html %}</nav>
+    <nav class="footer-links">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/work/' | relative_url }}">Work</a>
+      <a href="{{ site.substack }}">Substack</a>
+      <a href="https://www.linkedin.com/in/{{ site.linkedin }}/">LinkedIn</a>
+    </nav>
     <div class="theme-toggle" role="group" aria-label="Theme">
       <button data-theme-value="system" aria-label="System theme">
         <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
