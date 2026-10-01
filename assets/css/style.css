@@ -149,6 +149,12 @@ section + section { margin-top: 2.5rem; }
   font-size: clamp(2rem, 6.5vw, 3.5rem); letter-spacing: -0.01em; line-height: 1.05; text-transform: uppercase;
 }
 .resume-name a:hover { opacity: 0.8; }
+.resume-item h2 a {
+  text-decoration: underline; text-decoration-color: var(--mark);
+  text-decoration-thickness: 3px; text-underline-offset: 6px;
+  transition: color 0.15s;
+}
+.resume-item h2 a:hover { color: var(--mark); }
 .resume-intro { font-size: clamp(1.15rem, 2.6vw, 1.5rem); line-height: 1.5; margin: 1.5rem auto 0; max-width: 32em; }
 
 .resume-section { margin-bottom: 4.5rem; }
@@ -171,4 +177,4 @@ section + section { margin-top: 2.5rem; }
 .mark-dot { width: 9px; height: 9px; }
 .mark-dash { width: 30px; height: 11px; }
 
-.resume-end .mark-flower { width: 150px; height: auto; margin: 1rem auto 0; }
+.resume-end .mark-bolt { width: 110px; height: auto; margin: 1rem auto 0; }

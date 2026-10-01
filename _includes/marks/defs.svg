@@ -8,5 +8,21 @@
       <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -3 0 0 0 2.25" result="grainMask"/>
       <feComposite in="rough" in2="grainMask" operator="in"/>
     </filter>
+    <!-- Chalk look: powdery, broken-up strokes with a soft dusty halo -->
+    <filter id="chalk" x="-20%" y="-20%" width="140%" height="140%">
+      <!-- wobble the edges -->
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="2" result="wobble"/>
+      <feDisplacementMap in="SourceGraphic" in2="wobble" scale="7" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+      <!-- pale it toward pastel, like chalk on a board -->
+      <feColorMatrix in="rough" type="matrix" values="0.88 0 0 0 0.12  0 0.88 0 0 0.12  0 0 0.88 0 0.08  0 0 0 1 0" result="pale"/>
+      <!-- streaky grain: stretched noise leaves drag marks and gaps -->
+      <feTurbulence type="fractalNoise" baseFrequency="0.9 0.22" numOctaves="3" seed="8" result="streaks"/>
+      <feColorMatrix in="streaks" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -3 0 0 0 2.3" result="streakMask"/>
+      <feComposite in="pale" in2="streakMask" operator="in" result="chalky"/>
+      <!-- faint dust halo around each stroke -->
+      <feGaussianBlur in="pale" stdDeviation="2" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.18 0" result="dust"/>
+      <feMerge><feMergeNode in="dust"/><feMergeNode in="chalky"/></feMerge>
+    </filter>
   </defs>
 </svg>

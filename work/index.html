@@ -8,7 +8,7 @@ wide: true
 <div class="resume">
   <header class="resume-hero">
     <div class="burst-wrap yellow">
-      {% include marks/burst.svg %}
+      {% include marks/burst.svg filter="chalk" %}
       <h1 class="resume-name"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
     </div>
     <p class="resume-intro">{{ work.intro }}</p>
@@ -25,7 +25,7 @@ wide: true
 
     {% for item in section.items %}
     <div class="resume-item">
-      <h2>{{ item.title }}</h2>
+      <h2>{% if item.url %}<a href="{{ item.url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h2>
       {% if item.lines %}
         {% for line in item.lines %}<p class="resume-line">{{ line }}</p>{% endfor %}
       {% else %}
@@ -39,5 +39,5 @@ wide: true
   </section>
   {% endfor %}
 
-  <div class="resume-end yellow">{% include marks/flower.svg %}</div>
+  <div class="resume-end yellow">{% include marks/bolt.svg %}</div>
 </div>

@@ -1,5 +1,5 @@
 <svg class="mark mark-burst" viewBox="0 0 520 240" aria-hidden="true" focusable="false">
-  <g filter="url(#crayon)" fill="none" stroke="currentColor" stroke-linecap="round">
+  <g filter="url(#{{ include.filter | default: "crayon" }})" fill="none" stroke="currentColor" stroke-linecap="round">
     <path d="M256.9 37.7 Q257.1 22.0 257.8 6.3" stroke-width="21.0"/>
     <path d="M257.3 22.0 L265.0 6.5" stroke-width="4"/>
     <path d="M394.4 54.7 Q401.2 42.4 406.1 29.2" stroke-width="22.2"/>
