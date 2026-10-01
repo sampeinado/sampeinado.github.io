@@ -9,7 +9,7 @@ wide: true
   <header class="resume-hero">
     <div class="burst-wrap yellow">
       {% include marks/burst.svg %}
-      <h1 class="resume-name">{{ site.title }}</h1>
+      <h1 class="resume-name"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
     </div>
     <p class="resume-intro">{{ work.intro }}</p>
   </header>

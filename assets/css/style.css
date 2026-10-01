@@ -147,6 +147,7 @@ section + section { margin-top: 2.5rem; }
   font-family: "Montserrat", sans-serif; font-weight: 900;
   font-size: clamp(2rem, 6.5vw, 3.5rem); letter-spacing: -0.01em; line-height: 1.05; text-transform: uppercase;
 }
+.resume-name a:hover { opacity: 0.8; }
 .resume-intro { font-size: clamp(1.15rem, 2.6vw, 1.5rem); line-height: 1.5; margin: 1.5rem auto 0; max-width: 32em; }
 
 .resume-section { margin-bottom: 4.5rem; }
