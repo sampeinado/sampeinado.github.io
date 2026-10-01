@@ -1,0 +1,53 @@
+# Work page content. Each section has a label, a mark (underline, burst, or circle),
+# a color (yellow, cobalt, red, green), and items.
+# Item fields: title, details (list, joined with dots), from, to (optional), lines (optional list).
+intro: is a product leader building the next generation of the power grid, based in Stanford, California.
+
+sections:
+  - label: currently
+    mark: underline
+    color: cobalt
+    items:
+      - title: Stanford GSB
+        details: [MBA & MS Energy]
+        from: 2025
+        to: now
+      - title: Reading
+        lines:
+          - The Wise Man's Fear by Patrick Rothfuss
+          - Moby Dick by Herman Melville
+
+  - label: previously
+    mark: burst
+    color: red
+    items:
+      - title: X, the Moonshot Factory
+        details: ["Product Manager, Tapestry", Mountain View]
+        from: 2026
+      - title: Voltus
+        details: ["Senior → Staff Product Manager, API", NYC]
+        from: 2022
+        to: 2025
+      - title: Paces AI
+        details: [Co-Founder & Product Lead, NYC]
+        from: 2021
+      - title: VMware (Pivotal)
+        details: [Product Designer → Design Lead]
+        from: 2018
+        to: 2022
+      - title: Mahindra & Mahindra
+        details: [Group Strategy Office, Mumbai]
+        from: 2015
+        to: 2017
+
+  - label: also
+    mark: circle
+    color: green
+    items:
+      - title: Certified Professional Coach
+        details: [IPEC]
+        from: 2020
+      - title: Harvard University
+        details: ["History of Science, Computer Science & Studio Art"]
+        from: 2011
+        to: 2015

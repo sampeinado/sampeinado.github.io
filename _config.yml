@@ -10,17 +10,7 @@ github: sampeinado
 linkedin: sampeinado
 substack: https://lustforpower.substack.com/
 
-collections:
-  work:
-    output: true
-    permalink: /work/:name/
-
 markdown: kramdown
 exclude:
   - README.md
   - COPY.md
-
-defaults:
-  - scope: { type: work }
-    values:
-      layout: post

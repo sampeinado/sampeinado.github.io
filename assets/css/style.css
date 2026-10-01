@@ -130,3 +130,42 @@ section + section { margin-top: 2.5rem; }
   .intro-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .intro-col h2 { font-size: 1.75rem; }
 }
+
+/* Work page: centered visual résumé */
+.yellow { --mark: #f2a900; }
+.cobalt { --mark: #3b6fe0; }
+.red { --mark: #c94f3d; }
+.green { --mark: #3a8a4a; }
+.mark { color: var(--mark); display: block; overflow: visible; }
+
+.resume { text-align: center; max-width: 760px; margin: 0 auto; }
+.resume-hero { margin: 2rem 0 5rem; }
+.burst-wrap { position: relative; display: grid; place-items: center; width: min(620px, 100%); aspect-ratio: 520 / 240; margin: 0 auto; }
+.burst-wrap .mark-burst { position: absolute; inset: 0; width: 100%; height: 100%; }
+.resume-name {
+  position: relative; margin: 0;
+  font-family: "Montserrat", sans-serif; font-weight: 500;
+  font-size: clamp(2.2rem, 7vw, 3.75rem); letter-spacing: -0.02em; line-height: 1;
+}
+.resume-intro { font-size: clamp(1.15rem, 2.6vw, 1.5rem); line-height: 1.5; margin: 1.5rem auto 0; max-width: 32em; }
+
+.resume-section { margin-bottom: 4.5rem; }
+.resume-label { position: relative; display: grid; place-items: center; margin: 0 auto 2.25rem; font-style: italic; font-size: 1.15rem; }
+.resume-label span { position: relative; }
+.mark-underline { width: 130px; height: auto; margin-top: 0.35rem; }
+.resume-label.label-burst { min-height: 140px; margin-bottom: 1.5rem; }
+.resume-label .mark-burst { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 300px; height: auto; }
+.resume-label.label-circle { min-height: 105px; }
+.resume-label .mark-circle { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 190px; height: auto; }
+
+.resume-item { margin-bottom: 2.25rem; }
+.resume-item h2 {
+  font-family: "Montserrat", sans-serif; font-weight: 500;
+  font-size: clamp(1.6rem, 4.5vw, 2.25rem); letter-spacing: -0.015em; line-height: 1.15; margin: 0 0 0.4rem;
+}
+.resume-meta, .resume-line { font-size: clamp(1rem, 2.4vw, 1.2rem); color: var(--muted); margin: 0; line-height: 1.6; }
+.resume-meta { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; column-gap: 0.6rem; }
+.mark-dot { width: 9px; height: 9px; }
+.mark-dash { width: 30px; height: 11px; }
+
+.resume-end .mark-flower { width: 150px; height: auto; margin: 1rem auto 0; }

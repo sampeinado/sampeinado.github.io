@@ -1,8 +1,43 @@
 ---
 layout: page
 title: Work
+wide: true
 ---
-<p class="intro">A short index of the things I have built.</p>
-<h1 class="page-title">Work</h1>
-{% assign work = site.work | sort: "date" | reverse %}
-{% include list.html items=work %}
+{% assign work = site.data.work %}
+{% include marks/defs.svg %}
+<div class="resume">
+  <header class="resume-hero">
+    <div class="burst-wrap yellow">
+      {% include marks/burst.svg %}
+      <h1 class="resume-name">{{ site.title }}</h1>
+    </div>
+    <p class="resume-intro">{{ work.intro }}</p>
+  </header>
+
+  {% for section in work.sections %}
+  <section class="resume-section {{ section.color }}">
+    <div class="resume-label label-{{ section.mark }}">
+      {% if section.mark == "burst" %}{% include marks/burst.svg small=true %}{% endif %}
+      {% if section.mark == "circle" %}{% include marks/circle.svg %}{% endif %}
+      <span>{{ section.label }}</span>
+      {% if section.mark == "underline" %}{% include marks/underline.svg %}{% endif %}
+    </div>
+
+    {% for item in section.items %}
+    <div class="resume-item">
+      <h2>{{ item.title }}</h2>
+      {% if item.lines %}
+        {% for line in item.lines %}<p class="resume-line">{{ line }}</p>{% endfor %}
+      {% else %}
+      <p class="resume-meta">
+        {% for d in item.details %}<span>{{ d }}</span>{% include marks/dot.svg %}{% endfor %}
+        <span>{{ item.from }}</span>{% if item.to %}{% include marks/dash.svg %}<span>{{ item.to }}</span>{% endif %}
+      </p>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </section>
+  {% endfor %}
+
+  <div class="resume-end yellow">{% include marks/flower.svg %}</div>
+</div>
