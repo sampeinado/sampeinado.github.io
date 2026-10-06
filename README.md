@@ -1,6 +1,6 @@
-# sampeinado.github.io
+# smampeinado.github.io
 
-Personal website, built with Jekyll and hosted on GitHub Pages at https://sampeinado.github.io.
+Personal website, built with Jekyll and hosted on GitHub Pages at https://smampeinado.github.io.
 
 ## Editing
 
